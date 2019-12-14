@@ -1,10 +1,11 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
-	"github.com/jan25/gosample/custom"
-	"github.com/jan25/gosample/internal"
+	"github.com/jan25/gosamples/custom"
+	"github.com/jan25/gosamples/internal"
 )
 
 func main() {
