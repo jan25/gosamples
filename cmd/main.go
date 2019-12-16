@@ -6,6 +6,7 @@ import (
 	"strconv"
 
 	"github.com/jan25/gosamples/custom"
+	"github.com/jan25/gosamples/custom/advanced"
 	"github.com/jan25/gosamples/internal"
 )
 
@@ -28,6 +29,8 @@ func main() {
 		fmt.Printf("%d+%d=%d", a, b, internal.Add(a, b))
 	case "p":
 		fmt.Printf("%d^%d=%d", a, b, custom.Pow(a, b))
+	case "ap":
+		fmt.Printf("%d^%d=%d", a, b, advanced.Pow(a, b))
 	default:
 		fmt.Printf("ERROR: invalid args")
 	}
