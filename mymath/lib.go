@@ -1,4 +1,4 @@
-package internal
+package mymath
 
 // Add adds two integers
 func Add(a, b int) int {

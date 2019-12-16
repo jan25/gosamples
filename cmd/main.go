@@ -7,7 +7,7 @@ import (
 
 	"github.com/jan25/gosamples/custom"
 	"github.com/jan25/gosamples/custom/advanced"
-	"github.com/jan25/gosamples/internal"
+	"github.com/jan25/gosamples/mymath"
 )
 
 func main() {
@@ -24,9 +24,9 @@ func main() {
 	b := int(b32)
 	switch args[0] {
 	case "m":
-		fmt.Printf("%d*%d=%d", a, b, internal.Mult(a, b))
+		fmt.Printf("%d*%d=%d", a, b, mymath.Mult(a, b))
 	case "a":
-		fmt.Printf("%d+%d=%d", a, b, internal.Add(a, b))
+		fmt.Printf("%d+%d=%d", a, b, mymath.Add(a, b))
 	case "p":
 		fmt.Printf("%d^%d=%d", a, b, custom.Pow(a, b))
 	case "ap":
