@@ -1,4 +1,4 @@
-package mymath
+package custom
 
 // Pow is a raised to the bth power
 func Pow(a, b int) int {

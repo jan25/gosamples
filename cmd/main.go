@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 
 	"github.com/jan25/gosamples/custom"
 	"github.com/jan25/gosamples/internal"
@@ -16,16 +17,18 @@ func main() {
 		return
 	}
 
-	a := int(args[1])
-	b := int(args[2])
+	a32, _ := strconv.ParseInt(args[1], 10, 32)
+	b32, _ := strconv.ParseInt(args[2], 10, 32)
+	a := int(a32)
+	b := int(b32)
 	switch args[0] {
-	case 'm':
-		fmt.Println("%d*%d=%d", a, b, mathlib.Mult(a, b))
-	case 'a':
-		fmt.Println("%d+%d=%d", a, b, mathlib.Add(a, b))
-	case 'p':
-		fmt.Println("%d^%d=%d", a, b, mymath.Pow(a, b))
+	case "m":
+		fmt.Printf("%d*%d=%d", a, b, internal.Mult(a, b))
+	case "a":
+		fmt.Printf("%d+%d=%d", a, b, internal.Add(a, b))
+	case "p":
+		fmt.Printf("%d^%d=%d", a, b, custom.Pow(a, b))
 	default:
-		fmt.Println("ERROR: invalid args")
+		fmt.Printf("ERROR: invalid args")
 	}
 }

@@ -1,4 +1,4 @@
-package mathlib
+package internal
 
 // Add adds two integers
 func Add(a, b int) int {
